@@ -1,20 +1,34 @@
-import { useState } from "react";
+import { useContext } from "react";
+
+import { PermissionContext } from "../context/PermissionContext";
+
 import styled from 'styled-components';
 
 const Input = styled.input`
         background-color: #333;
         border: none;
-        border-radius: 8px;
-        font-size: 20px;
+        border-radius: 16px;
+        text-decoration: none;
+        text-align: center;
+        font-size: 48px;
+        font-family: 'Cascadia Code';
+        outline: 0px;
+        width: 30rem;
+        letter-spacing: 10px;
+        ::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        -moz-appearance: textfield;
     `;
 
-export function OctalInput() {
+export const OctalInput = () => {
 
-    const [permission, setPermission] = useState<string>('')
+    const { permission, handlePermission } = useContext(PermissionContext)
 
     const handleInput = async (e: any) => {
         if (e.target.value.length <= 3) {
-            setPermission(e.target.value)
+            handlePermission!(e.target.value)
         }
         e.target.value = e.target.value.substr(0, 3)
     }
@@ -29,8 +43,6 @@ export function OctalInput() {
                 maxLength={3}
                 onChange={handleInput}
             />
-            <br />
-            {permission}
         </div>
     );
 }

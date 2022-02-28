@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { PermissionContext, PermissionProvider } from './context/PermissionContext';
 import { OctalInput } from './components/OctalInput'
+import { PermissionTable } from "./components/PermissionTable";
+
 import styled from 'styled-components';
 import { GlobalStyles } from './styles/GlobalStyles'
 
@@ -16,10 +18,13 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <Main>
-        <h1>Chmod Guru!!!</h1>
-        <OctalInput />
-      </Main>
+      <PermissionProvider>
+        <Main>
+          <h1>Chmod Guru!!!</h1>
+          <OctalInput />
+          <PermissionTable />
+        </Main>
+      </PermissionProvider>
     </>
   )
 }
