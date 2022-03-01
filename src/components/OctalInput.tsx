@@ -13,8 +13,10 @@ const Input = styled.input`
         font-size: 48px;
         font-family: 'Cascadia Code';
         outline: 0px;
-        width: 30rem;
+        width: 100%;
+        padding: 0;
         letter-spacing: 10px;
+        margin-bottom: 1rem;
         ::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;

@@ -11,6 +11,7 @@ const Main = styled.main`
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
+    padding: .25rem;
 `;
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Main>
           <h1>Chmod Guru!!!</h1>
           <p>
-            Um simples utilitário para saber qual permissão é do Linux!!!
+            Um simples utilitário para saber qual é permissão do Linux!!!
           </p>
           <OctalInput />
           <PermissionTable />

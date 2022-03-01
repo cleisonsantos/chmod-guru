@@ -17,7 +17,7 @@ export const GlobalStyles = createGlobalStyle`
             sans-serif;
     }
     h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
         margin-bottom: 1rem;
     }
 `;

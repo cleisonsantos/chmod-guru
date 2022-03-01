@@ -3,8 +3,7 @@ import { usePermissionContext } from "../context/PermissionContext";
 import styled from "styled-components";
 
 const Table = styled.table`
-    margin: 10px;
-    width: 25rem;
+    width: auto;
     thead {
         border-bottom: 1px #e8e6e3 solid;
     }
