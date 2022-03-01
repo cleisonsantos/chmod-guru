@@ -1,4 +1,4 @@
-import { PermissionContext, PermissionProvider } from './context/PermissionContext';
+import { PermissionProvider } from './context/PermissionContext';
 import { OctalInput } from './components/OctalInput'
 import { PermissionTable } from "./components/PermissionTable";
 
