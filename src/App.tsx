@@ -21,6 +21,9 @@ function App() {
       <PermissionProvider>
         <Main>
           <h1>Chmod Guru!!!</h1>
+          <p>
+            Um simples utilitário para saber qual permissão é do Linux!!!
+          </p>
           <OctalInput />
           <PermissionTable />
         </Main>
